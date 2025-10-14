@@ -180,7 +180,8 @@ with st.form("score_form", clear_on_submit=True):
     file = st.file_uploader("Upload Resume", type=["pdf", "txt"], help="PDF or TXT only, max 5MB.")
     submitted = st.form_submit_button("Score Candidate Fit", help="Analyze the candidate's resume")
 
-api_url = "http://127.0.0.1:5000/predict"
+apiurl = "https://hrai-production-d483.up.railway.app/predict"
+
 
 if submitted:
     if not name or not file:
